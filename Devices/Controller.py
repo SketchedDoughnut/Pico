@@ -51,10 +51,17 @@ class ControllerInterface:
     # TODO
     def setJoystick(self, joystick: str, value: int) -> None:
         '''
-        Takes a value from -127 to 127, moving the joystick left and right respectively.
+        Takes a value from -127 to 127 and moves the joystick respectively.
         '''
-        # if value < -127: value = -127
-        # if value > 127: value = 127
+        # clamp value from -127 to 127
+        if value < -127: value = -127
+        elif value > 127: value = 127
+        # if value negative (going left)
+        if value < 0:
+            # next, add 255 (since 255 + (negative) is range of 128 - 255, which is left -> middle)
+            value = value + 255
+            # next, make sure value stays below 255
+            if value > 255: value = 255
         self.js_map[joystick] = value
         return
     
@@ -87,10 +94,10 @@ class ControllerInterface:
         report = bytearray(6)
         report[0] = self.buttons & 0xFF        # low byte  (buttons 1–8)
         report[1] = (self.buttons >> 8) & 0xFF # high byte (buttons 9–16)
-        report[2] = self.js_map[self.x]
-        report[3] = self.js_map[self.y]
-        report[4] = self.js_map[self.z]
-        report[5] = self.js_map[self.rz]
+        report[2] = self.js_map[self.x]  # left X
+        report[3] = self.js_map[self.y]  # left Y
+        report[4] = self.js_map[self.z]  # right X
+        report[5] = self.js_map[self.rz] # right Y
         self.gamepad.send_report(report, 4)
         return
 
