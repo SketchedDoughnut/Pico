@@ -56,7 +56,7 @@ class ControllerInterface:
         if value >= 128 and value <= 255: value -= 255
         return value
         
-    def setJoystick(self, joystick: str, value: int) -> None:
+    def moveJoystick(self, joystick: str, value: int) -> None:
         '''
         Takes a value from -127 to 127 and moves the joystick respectively.
         '''
@@ -79,7 +79,7 @@ class ControllerInterface:
         '''
         current = self.getJoystick(joystick)
         current += value
-        self.setJoystick(joystick, current)
+        self.moveJoystick(joystick, current)
         return 
     
     def resetJoysticks(self):
