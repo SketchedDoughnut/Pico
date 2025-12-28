@@ -1,2 +1,2 @@
 # Pico_Controller
-a place to save code for a raspberry pico 2W, so I don't have to store code on the device.
+Hello! Here you will find code for programming a Raspberry Pico 2W to be a translation device for inputs, mimicking a variety of different devices; keyboards, controllers, etc.
