@@ -6,4 +6,4 @@ Hello! Here you will find a variety of different projects involving a Raspberry 
 # Projects
 
 ## [input-device-pico](/docs/input-device-pico.md)
-    This project is all about designing a Pico to act like another device. You can use it to make it map any inputs it recieves to a known controller (such as an Xbox controller), or make it act like anything else you want.
+This project is all about designing a Pico to act like another device. You can use it to make it map any inputs it recieves to a known controller (such as an Xbox controller), or make it act like anything else you want.
