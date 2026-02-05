@@ -1,0 +1,2 @@
+# Fixing your pico
+If at any point you happen to have broken your pico and it will not boot and you can not put new firmware on it to fix this problem, you can do a "flash nuke". At the bottom of [this page](https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html#resetting-flash-memory) there is a download in order to do this. Just install the UF2 file, then flash the firmware on your pico as normal.

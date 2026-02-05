@@ -1,8 +1,9 @@
-# pico_device
-Hello! Here you will find code for programming a Raspberry Pico 2W to be a translation device for inputs, mimicking a variety of different devices; keyboards, controllers, etc. <br>
-This has only been tested on a Raspberry Pico 2W, and not on other devices. Feel free to modify this for any use-case that you have. <br>
-A guide for instructions can be found [here!](/Guide.md)
+# Pico
+Hello! Here you will find a variety of different projects involving a Raspberry Pi Pico 2W. Things from simulating a controller to translating inputs from a custom device to running intelligent programs, there is so many to see!
 
-These other repositories might be helpful:
-- https://github.com/nefarius/ViGEmBus
-- https://github.com/Snoothy/UCR
+*** 
+
+# Projects
+
+## [input-device-pico](/docs/input-device-pico.md)
+    This project is all about designing a Pico to act like another device. You can use it to make it map any inputs it recieves to a known controller (such as an Xbox controller), or make it act like anything else you want.
